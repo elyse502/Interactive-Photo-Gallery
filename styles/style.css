@@ -1,0 +1,19 @@
+/* styles/style.css */
+
+body {
+    background-color: black;
+}
+
+.img-gallery {
+    margin: 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .img-gallery img {
+    width: 270px;
+    height: 535px;
+    object-fit: cover;
+    margin: 1px;
+  }
