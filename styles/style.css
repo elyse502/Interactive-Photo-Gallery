@@ -23,14 +23,20 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  height: 100vh;
-  background-color: black;
+  background-color: var(--clr-gray100);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .img-gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .card {
@@ -38,13 +44,13 @@ body {
   border-radius: 10px;
   cursor: pointer;
   position: relative;
+  width: calc(25% - 1rem);
+  transition: transform 250ms ease-out;
 }
 
 .card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 250ms ease-out;
+  height: auto;
   display: block;
 }
 
@@ -53,34 +59,51 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   background: rgba(0, 0, 0, 0.5);
+  color: #fff;
   padding: 0.5rem;
   opacity: 0;
-  transition: opacity 350ms;
+  transition: opacity 350ms, bottom 250ms;
 }
 
-.card .card__details p {
+.card p {
   text-align: center;
   line-height: 1.5rem;
   color: var(--clr-primary);
-  text-shadow: 0 0 20px var(--clr-gray700), 0 0 5px var(--clr-gray500);
-  position: relative;
-  transition: bottom 250ms;
-  bottom: -1rem;
+  transition: transform 250ms;
 }
 
+/* card hover Effects */
 .card:hover img {
   transform: scale(1.1);
 }
 
 .card:hover .card__details {
   opacity: 1;
+  bottom: 0;
 }
 
 .card:hover .card__details p {
-  bottom: 0;
+  transform: translateY(-10px);
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
 }
