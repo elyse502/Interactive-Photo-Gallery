@@ -17,7 +17,7 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: transform 250ms ease-out, opacity 250ms ease-out;
   width: calc(25% - 1rem);
 }
