@@ -8,7 +8,7 @@
     ```bash
     cd Interactive-Photo-Gallery
     ```
-3. Open `index.html` in your preferred web browser.
+3. Open [index.html](https://elyse502.github.io/Interactive-Photo-Gallery/) in your preferred web browser.
 
 ## Coding Challenges
 
